@@ -10,6 +10,8 @@ _🚧 **work in progress** 🚧_
 - ✅ Bookmark/save videos
 - ✅ Folder/tag organization
 
+_*none of the features are implemented yet_
+
 ### Running
 ``` bash
 git clone https://www.github.com/gokul810/lynk-notes.git
