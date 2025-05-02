@@ -4,7 +4,6 @@ A minimal YouTube based note taking app, for the folks who like to do programmin
 
 _🚧 **work in progress** 🚧_
 
----
 ### Features
 - ✅ YouTube Search + in-app viewing
 - ✅ Timestamped note-taking
