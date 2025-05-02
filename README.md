@@ -6,10 +6,10 @@ _🚧 **work in progress** 🚧_
 
 ---
 ### Features
-- YouTube Search + in-app viewing
-- Timestamped note-taking
-- Bookmark/save videos
-- Folder/tag organization
+- ✅ YouTube Search + in-app viewing
+- ✅ Timestamped note-taking
+- ✅ Bookmark/save videos
+- ✅ Folder/tag organization
 
 ### Running
 ``` bash
