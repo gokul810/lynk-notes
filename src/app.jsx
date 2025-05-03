@@ -38,7 +38,7 @@ const App = () => {
 
     return (
         <div>
-            <Navbar onTabChange={handleTabChange} />
+            <Navbar onTabChange={handleTabChange} activeTab={activeTab}/>
             <div className="tab-content" style={{minHeight: "100vh", overflow: "hidden" ,position: "relative"}}>
                 <AnimatePresence mode="wait">
                     <MotionDiv 
