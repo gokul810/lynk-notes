@@ -4,9 +4,9 @@ import "../../style/notes.css"
 const Notes = () => {
 
     return (
-        <>
-            <h1>Notes</h1>
-        </>
+        <div className="notes-container">
+            <p>no notes available</p>
+        </div>
     );
 }
 

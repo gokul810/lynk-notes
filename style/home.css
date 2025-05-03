@@ -14,6 +14,7 @@ body, html {
 
 /* Main container */
 .search-container {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,7 +22,8 @@ body, html {
     min-height: 100vh;
     padding: 20px;
     text-align: center;
-    background-color: var(--bg-dark);
+    /* background-color: var(--bg-dark); */
+    overflow: hidden;
 }
 
 /* Title */
@@ -70,4 +72,17 @@ body, html {
         font-size: 0.95rem;
         border-radius: 16px;
     }
+}
+
+.top-gradient-light {
+    position: absolute;
+    top: -600px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1000px;
+    height: 1000px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 60%);
+    filter: blur(150px);
+    pointer-events: none;
+    z-index: 0;
 }

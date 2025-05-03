@@ -7,6 +7,7 @@ const Home = () => {
 
     return (
         <div className="search-container">
+            <div className="top-gradient-light"></div>
             <h1 style={{fontSize: "45px"}}>Lynk Notes</h1>
             <input
                 type="text"
