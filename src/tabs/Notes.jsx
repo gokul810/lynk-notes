@@ -5,7 +5,7 @@ const Notes = () => {
 
     return (
         <div className="notes-container">
-            <p>no notes available</p>
+            <p>empty</p>
         </div>
     );
 }
