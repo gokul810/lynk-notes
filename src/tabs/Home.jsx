@@ -1,9 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../style/home.css";
 
-let inputValue;
+const Home = ({ handleTabChange }) => {
+    const [inputValue, setInputValue] = useState("");
 
-const Home = () => {
+    const handleInputChange = (e) => {
+        setInputValue(e.target.value);
+    };
+
+    const handleSearch = () => {
+        // check if it's a valid youtube link
+        const youtubeRegex = /^(https?:\/\/)?(www\.)?(youtube|youtu|youtube-nocookie)\.(com|be)\/.+$/;
+
+        if (youtubeRegex.test(inputValue.trim())) {
+            handleTabChange("notes");
+
+        } else {
+            // TODO: add some fancy notification alert ui
+            alert("PLease enter a valid youtube link...");
+        }
+    };
+
+    const handleKeyDown = (e) => {
+        if (e.key === "Enter") {
+            handleSearch();
+        }
+    };
 
     return (
         <div className="search-container">
@@ -12,9 +34,11 @@ const Home = () => {
             <input
                 type="text"
                 placeholder="Search YouTube or paste a link..."
-                value={inputValue}
+                value={inputValue || ""}
+                onChange={handleInputChange}
+                onKeyDown={handleKeyDown}
                 className="search-input"
-            />
+            />  
         </div>
     );
 }

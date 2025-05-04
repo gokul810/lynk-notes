@@ -23,19 +23,6 @@ const App = () => {
         setActiveTab(newTab);
     };
 
-    const renderTab = () => {
-        switch(activeTab) {
-            case "home":
-                return <Home />
-            case "notes":
-                return <Notes />
-            case "settings":
-                return <Settings />
-            default:
-                return null;
-        }
-    };
-
     return (
         <div>
             <Navbar onTabChange={handleTabChange} activeTab={activeTab}/>
@@ -49,8 +36,15 @@ const App = () => {
                         transition={{ duration: 0.1, ease: "easeInOut"}}
                         style={{width: "100%" }}
                     >
-
-                        {renderTab()}
+                        <div style={{ display: activeTab == "home" ? "block" : "none" }}>
+                            <Home handleTabChange={handleTabChange} />
+                        </div>
+                        <div style={{ display: activeTab == "notes" ? "block" : "none" }}>
+                            <Notes />
+                        </div>
+                        <div style={{ display: activeTab == "settings" ? "block" : "none" }}>
+                            <Settings />
+                        </div>
                     </MotionDiv>
                 </AnimatePresence>
 

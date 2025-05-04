@@ -5,66 +5,74 @@
     --bg-card: #0d0d0d;           /* slightly lifted card surface */
     --text-light: #ffffff;        /* crisp white text */
     --text-muted: #888888;        /* softer muted text */
-    --accent: #00C6AE;            /* your original accent color */
+    --accent: #00C6AE;            /* original accent color */
     --input-bg: #1a1a1a;          /* dark input surface */
     --border-color: #2c2c2c;      /* very subtle borders */
     --radius-lg: 24px;            /* rounded look */
 }
-
-
 
 * {
     padding: 0;
     margin: 0;
 }
 
-/* bg grid */
-
+/* Background grid */
 body {
     margin: 0;
     padding: 0;
     font-family: 'Inter', sans-serif;
     background-color: var(--bg-dark);
     background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
-    background-size: 24px 24px;
+        linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    background-size: 24px 24px; /* Base grid size */
     background-position: top left;
     color: var(--text-light);
-    background-attachment: fixed;
+    background-repeat: repeat;  /* Ensures the grid pattern repeats properly */
 }
 
 /* Small tablets and large phones */
 @media (min-width: 480px) {
     body {
-        background-size: 28px 28px;
+        background-size: 28px 28px;  /* Slightly larger grid for tablets and larger phones */
     }
 }
 
 /* iPads and small tablets */
 @media (min-width: 768px) {
     body {
-        background-size: 32px 32px;
+        background-size: 32px 32px;  /* Adjust grid size for tablets */
     }
 }
 
 /* Larger tablets and small laptops */
 @media (min-width: 1024px) {
     body {
-        background-size: 36px 36px;
+        background-size: 36px 36px;  /* Larger grid for larger screens */
     }
 }
 
 /* Desktop monitors */
 @media (min-width: 1200px) {
     body {
-        background-size: 40px 40px;
+        background-size: 40px 40px;  /* Larger grid for desktops */
     }
 }
 
 /* Large monitors */
 @media (min-width: 1600px) {
     body {
-        background-size: 48px 48px;
+        background-size: 48px 48px;  /* Largest grid size */
+    }
+}
+
+/* Fallback for mobile devices that might face issues with repeating grid patterns */
+@media (max-width: 768px) {
+    body {
+        background-image: 
+            linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+        background-size: 24px 24px; /* Keep it smaller on mobile */
+        background-repeat: repeat;
     }
 }
