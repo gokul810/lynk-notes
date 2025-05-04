@@ -13,7 +13,7 @@ const Home = ({ handleTabChange }) => {
         const youtubeRegex = /^(https?:\/\/)?(www\.)?(youtube|youtu|youtube-nocookie)\.(com|be)\/.+$/;
 
         if (youtubeRegex.test(inputValue.trim())) {
-            handleTabChange("notes");
+            handleTabChange("notes", inputValue.trim());
 
         } else {
             // TODO: add some fancy notification alert ui
