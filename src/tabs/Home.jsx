@@ -17,7 +17,7 @@ const Home = ({ handleTabChange }) => {
 
         } else {
             // TODO: add some fancy notification alert ui
-            alert("PLease enter a valid youtube link...");
+            alert("Please enter a valid youtube link...");
         }
     };
 
@@ -30,10 +30,9 @@ const Home = ({ handleTabChange }) => {
     return (
         <div className="search-container">
             <div className="top-gradient-light"></div>
-            <h1 style={{fontSize: "45px"}}>Lynk Notes</h1>
             <input
                 type="text"
-                placeholder="Search YouTube or paste a link..."
+                placeholder="Paste a YouTube video link to begin :)"
                 value={inputValue || ""}
                 onChange={handleInputChange}
                 onKeyDown={handleKeyDown}
